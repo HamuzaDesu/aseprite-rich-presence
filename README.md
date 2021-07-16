@@ -9,6 +9,7 @@ A simple to use Discord RPC application for Aseprite.
 - NPM - Included with Node.
 - Windows Build Tools - check Setup.
 
+
 ## Setup
 - Pull the repository contents, or download the repository ZIP and extract the contents.
 - In the console, type `npm install --global windows-build-tools`, this is required. _Windows only._
@@ -20,6 +21,25 @@ A simple to use Discord RPC application for Aseprite.
 - When the installation is done, run `npm-install.bat`, this installs all needed packages.
 - Run `start.bat` and enter your `Aseprite.exe` path.
 - After everything is installed and configured, you don't need to install it anymore. Every time you need to run the rich presence, open `start.bat`.
+
+## For options I've (HamuzaDesu) added (_Windows only_)
+
+ ### Do all this first:
+- Pull the repository contents, or download the repository ZIP and extract the contents.
+- In the console, type `npm install --global windows-build-tools`, this is required. _Windows only._
+- After that is done, type `npm install`, this will install all of the needed packages.
+
+### Then do this:
+- install pm2. run `npm install pm2@latest -g` in the console
+- move `restartPm2Apps.cmd` to startup folder (type `shell:startup` in windows run (windows key + r))
+- run `startSilently.cmd`
+- run `pm2 save` in the console
+- after all this is done you dont need to run the script ever again. It will now automatically run on startup
+
+## What i've done
+- I have made a new script to automatically detect when Aseprite is open
+- Once aseprite opens it wil automatically run the rich presence script in the background (so there is no annoying console)
+- When aseprite is closed it will then stop the rich presence script and wait for aseprite to open again
 
 ## Supported File Extensions
 - `ASE`/`ASEPRITE`,

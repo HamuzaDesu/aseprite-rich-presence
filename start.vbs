@@ -1,0 +1,1 @@
+CreateObject("Wscript.Shell").Run "node asepriteRichPresence > log.txt", 0
